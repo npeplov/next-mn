@@ -19,21 +19,21 @@ async function getData(id: string) {
   return response.json();
 }
 
-export async function generateMetada({
+export async function generateMetadata({
   params: { id },
 }: Props): Promise<Metadata> {
+  const post = await getData(id);
   return {
-    title: id,
+    title: post.title,
   };
 }
 
 export default async function Post({ params: { id } }: Props) {
   const post = await getData(id);
-
   return (
-    <div>
-      <h1>Post {post.title} {id}</h1>
+    <>
+      <h1>{post.title}</h1>
       <p>{post.body}</p>
-    </div>
+    </>
   );
 }
