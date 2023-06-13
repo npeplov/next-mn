@@ -3,7 +3,7 @@ import Link from "next/link";
 
 // SSR
 async function getData() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts/qqq", {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
     next: {
       revalidate: 60,
     }
