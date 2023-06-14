@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={"flex flex-col min-h-screen"}>
         <TheHeader />
         <main>
-          <div className="container m-auto">{children}</div>
+          <div className="container ">{children}</div>
         </main>
         <TheFooter />
       </body>
