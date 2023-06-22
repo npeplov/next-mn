@@ -26,11 +26,11 @@ body {
   }
 
   main {
-    @apply flex-grow flex flex-col py-6
+    @apply flex-grow flex flex-col py-6 bg-white items-center
   }
 
   main > div {
-    @apply w-full
+    @apply w-screen
   }
 
   h1 {
